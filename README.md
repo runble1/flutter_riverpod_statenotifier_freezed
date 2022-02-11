@@ -1,4 +1,4 @@
-# tutorial_hooks_freezed
+# tutorial hooks_freezed + state_notifier + freezed
 
 A new Flutter project.
 

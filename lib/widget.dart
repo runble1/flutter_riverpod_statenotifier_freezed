@@ -8,7 +8,7 @@ class MyHomePage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final count = ref.watch(counterProvider);
+    final counter = ref.watch(counterProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -16,7 +16,7 @@ class MyHomePage extends HookConsumerWidget {
       ),
       body: Center(
         child: Text(
-          '${count.count}',
+          '${counter.count}',
           style: Theme.of(context).textTheme.headline4,
         ),
       ),
