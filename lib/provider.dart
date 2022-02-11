@@ -1,14 +1,15 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'counter_entitie.dart';
+import 'counter_state.dart';
 
-final counterProvider = StateNotifierProvider<CounterNotifier, Counter>(
-  (ref) => CounterNotifier(const Counter()),
+final counterProvider = StateNotifierProvider<CounterNotifier, CounterState>(
+  (ref) => CounterNotifier(const CounterState()),
 );
 
-class CounterNotifier extends StateNotifier<Counter> {
-  CounterNotifier(Counter state) : super(state);
+class CounterNotifier extends StateNotifier<CounterState> {
+  CounterNotifier(CounterState state) : super(state);
 
+  // state は immutable なため、copyWith で複製する
   void increment() {
     state = state.copyWith(count: state.count + 1);
   }

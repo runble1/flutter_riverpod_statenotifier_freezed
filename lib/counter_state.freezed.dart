@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'counter_entitie.dart';
+part of 'counter_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,8 +15,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$CounterTearOff {
-  const _$CounterTearOff();
+class _$CounterStateTearOff {
+  const _$CounterStateTearOff();
 
   _Counter call({int count = 0}) {
     return _Counter(
@@ -26,30 +26,32 @@ class _$CounterTearOff {
 }
 
 /// @nodoc
-const $Counter = _$CounterTearOff();
+const $CounterState = _$CounterStateTearOff();
 
 /// @nodoc
-mixin _$Counter {
+mixin _$CounterState {
   int get count => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $CounterCopyWith<Counter> get copyWith => throw _privateConstructorUsedError;
+  $CounterStateCopyWith<CounterState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CounterCopyWith<$Res> {
-  factory $CounterCopyWith(Counter value, $Res Function(Counter) then) =
-      _$CounterCopyWithImpl<$Res>;
+abstract class $CounterStateCopyWith<$Res> {
+  factory $CounterStateCopyWith(
+          CounterState value, $Res Function(CounterState) then) =
+      _$CounterStateCopyWithImpl<$Res>;
   $Res call({int count});
 }
 
 /// @nodoc
-class _$CounterCopyWithImpl<$Res> implements $CounterCopyWith<$Res> {
-  _$CounterCopyWithImpl(this._value, this._then);
+class _$CounterStateCopyWithImpl<$Res> implements $CounterStateCopyWith<$Res> {
+  _$CounterStateCopyWithImpl(this._value, this._then);
 
-  final Counter _value;
+  final CounterState _value;
   // ignore: unused_field
-  final $Res Function(Counter) _then;
+  final $Res Function(CounterState) _then;
 
   @override
   $Res call({
@@ -65,7 +67,7 @@ class _$CounterCopyWithImpl<$Res> implements $CounterCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CounterCopyWith<$Res> implements $CounterCopyWith<$Res> {
+abstract class _$CounterCopyWith<$Res> implements $CounterStateCopyWith<$Res> {
   factory _$CounterCopyWith(_Counter value, $Res Function(_Counter) then) =
       __$CounterCopyWithImpl<$Res>;
   @override
@@ -73,7 +75,7 @@ abstract class _$CounterCopyWith<$Res> implements $CounterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CounterCopyWithImpl<$Res> extends _$CounterCopyWithImpl<$Res>
+class __$CounterCopyWithImpl<$Res> extends _$CounterStateCopyWithImpl<$Res>
     implements _$CounterCopyWith<$Res> {
   __$CounterCopyWithImpl(_Counter _value, $Res Function(_Counter) _then)
       : super(_value, (v) => _then(v as _Counter));
@@ -97,7 +99,7 @@ class __$CounterCopyWithImpl<$Res> extends _$CounterCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Counter with DiagnosticableTreeMixin implements _Counter {
-  const _$_Counter({this.count = 0}) : assert(count >= 0);
+  const _$_Counter({this.count = 0});
 
   @JsonKey()
   @override
@@ -105,14 +107,14 @@ class _$_Counter with DiagnosticableTreeMixin implements _Counter {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Counter(count: $count)';
+    return 'CounterState(count: $count)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'Counter'))
+      ..add(DiagnosticsProperty('type', 'CounterState'))
       ..add(DiagnosticsProperty('count', count));
   }
 
@@ -134,7 +136,7 @@ class _$_Counter with DiagnosticableTreeMixin implements _Counter {
       __$CounterCopyWithImpl<_Counter>(this, _$identity);
 }
 
-abstract class _Counter implements Counter {
+abstract class _Counter implements CounterState {
   const factory _Counter({int count}) = _$_Counter;
 
   @override
